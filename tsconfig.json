@@ -3,5 +3,5 @@
   // its own, because a project that references others type-checks against their emitted declarations, and
   // these projects emit nothing. A new package or app extends tsconfig.base.json and adds its path here.
   "files": [],
-  "references": [{ "path": "./tsconfig.root.json" }]
+  "references": [{ "path": "./tsconfig.root.json" }, { "path": "./packages/brand" }]
 }
