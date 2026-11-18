@@ -6,6 +6,7 @@
   "author": "Mutano",
   "type": "module",
   "scripts": {
+    "assets": "node scripts/assets.ts",
     "build": "pnpm -r --if-present run build",
     "format:check": "oxfmt --check && prettier --check --log-level warn \"**/*.md\"",
     "format:fix": "oxfmt && prettier --write --log-level warn \"**/*.md\"",
@@ -19,6 +20,7 @@
     "verify": "pnpm format:check && pnpm lint:check && pnpm build && pnpm typecheck && pnpm test"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "catalog:",
     "@types/node": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "oxfmt": "catalog:",
