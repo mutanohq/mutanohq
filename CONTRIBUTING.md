@@ -15,7 +15,7 @@ pnpm install
 
 Setup also points git at `.githooks/` through `core.hooksPath`, so the hooks described below start working after it and not before. [Tooling](docs/tooling.md#setup) says where each version is pinned, what happens outside it, and how to point git at the hooks by hand.
 
-Start the website for development with `pnpm --filter @mutano/website dev`.
+Start the website for development with `pnpm --filter @mutano/www dev`.
 
 ## Changes
 

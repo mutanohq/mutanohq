@@ -40,6 +40,7 @@ Setup needs pnpm 10 or later on the `PATH`, installed apart from Node.js, with t
 | `pnpm build`         | `pnpm -r --if-present run build`. A package without a `build` script is skipped.            |
 | `pnpm verify`        | The checks above in the order [Workspace](workspace.md#root-scripts) gives.                 |
 | `pnpm prepare`       | `git config core.hooksPath .githooks`, reporting rather than failing when git cannot.       |
+| `pnpm assets`        | `node scripts/assets.ts`: rewrites the generated brand files under `assets/`.               |
 
 ## TypeScript and Vitest
 

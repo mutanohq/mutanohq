@@ -1,6 +1,6 @@
 # Mutano
 
-<img src="packages/brand/assets/logo/lockup.svg" alt="Mutano" width="240">
+<img src="assets/logo/logo-dark.svg" alt="Mutano" width="240">
 
 Mutano's headquarters: the brand, website, and shared code behind everything we make.
 
@@ -8,8 +8,9 @@ Mutano is home to games, animation, visual novels, movies, and other fun things,
 
 ## Repository
 
-- `apps/website/`: the public website, `@mutano/website`, built with Astro. It also serves the brand kit at `/brand`.
-- `packages/brand/`: the brand kit, `@mutano/brand`: logos, icons, color tokens, and fonts.
+- `apps/www/`: the public website, `@mutano/www`, built with Astro. It also publishes the brand files at `/brand`.
+- `assets/`: the brand files: logos, icons, social images, the color palette, and fonts. [Assets](docs/assets.md) lists them.
+- `scripts/`: the repository's own scripts, including `pnpm assets`, which generates the logos and icons.
 - `docs/`: the guidelines, specifications, and references the code follows, including the [brand guidelines](docs/guidelines/brand.md).
 
 ## Development
@@ -20,7 +21,7 @@ pnpm install
 pnpm verify
 ```
 
-`pnpm --filter @mutano/website dev` starts the website locally. `pnpm verify` runs every check CI runs. [Tooling](docs/tooling.md) describes each command.
+`pnpm --filter @mutano/www dev` starts the website locally. `pnpm verify` runs every check CI runs. [Tooling](docs/tooling.md) describes each command.
 
 ## Documentation
 
@@ -31,4 +32,4 @@ pnpm verify
 
 ## License
 
-The code is under [Apache-2.0](LICENSE). The Mutano name, logo, and icons are not: the [brand guidelines](docs/guidelines/brand.md#logo) say how to use them. The fonts in `packages/brand/fonts` are under the SIL Open Font License 1.1.
+The code is under [Apache-2.0](LICENSE). The Mutano name, logo, and icons are not: the [brand guidelines](docs/guidelines/brand.md#logo) say how to use them. The fonts in `assets/fonts` are under the SIL Open Font License 1.1.

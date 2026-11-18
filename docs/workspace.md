@@ -23,6 +23,7 @@ This document is the workspace's contract: the names of the root scripts and wha
 | `pnpm build`         | Every package that produces output builds, in dependency order.                                                                               |
 | `pnpm verify`        | `format:check`, `lint:check`, `build`, `typecheck` and `test`, in that order, then any check the project adds, stopping at the first failure. |
 | `pnpm prepare`       | Runs on install: points git at the committed hooks in `.githooks/`.                                                                           |
+| `pnpm assets`        | The generated brand files under `assets/` match their sources. [Assets](assets.md) lists them.                                                |
 
 `pnpm verify` is what CI runs ([CI](ci.md)), so a green local `verify` predicts a green run. The order puts the cheapest checks first, so a formatting slip is reported in a second instead of after the tests. The build comes before type checking and tests because a package that imports another workspace package resolves it through that package's `exports`, which for a built package point at `dist/`: on a fresh clone, as in CI, a type check or a test run before the build cannot resolve the import and fails.
 

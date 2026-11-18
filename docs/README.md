@@ -40,6 +40,7 @@ The project's overview documents, for example:
 | [Workspace](workspace.md) | The root scripts and what each guarantees, the shared tool configurations, the pinned toolchain, installs, and dependency versions. |
 | [Tooling](tooling.md)     | Setup, how the scripts are implemented, the compiler and test runner configuration, narrowing a run, and adding a package.          |
 | [CI](ci.md)               | The verification jobs, the setup action, action pinning, dependency updates, and branch protection.                                 |
+| [Assets](assets.md)       | Every brand file under `assets/`, what it is for, and how `pnpm assets` generates it.                                               |
 
 <!-- The project's own references for one repository area or process (for example assets or releases), as a table with the same columns. -->
 

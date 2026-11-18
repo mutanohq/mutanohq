@@ -1,0 +1,126 @@
+---
+import Base from "../layouts/base.astro";
+
+const things = [
+  { name: "Games", text: "Some on the web, some not, sharing a common core where it makes sense." },
+  { name: "Animation", text: "Stories that move." },
+  { name: "Visual novels", text: "Stories you read and choose." },
+  { name: "Movies", text: "Stories on the big screen, or a small one." },
+];
+---
+
+<Base description="Mutano is home to games, animation, visual novels, movies, and other fun things, and to the community around them.">
+  <section class="hero">
+    <img class="mark" src="/brand/assets/logo/mark-light.svg" alt="" width="240" height="176" />
+    <div>
+      <h1>Infinite fun.</h1>
+      <p class="lede">
+        Mutano is home to the games, animation, visual novels, movies, and other fun things we make, and to the
+        community that grows around them.
+      </p>
+      <a class="button" href="https://github.com/mutanohq">Follow along on GitHub</a>
+    </div>
+  </section>
+
+  <section class="name" aria-labelledby="name-title">
+    <h2 id="name-title">The name</h2>
+    <p class="equation">
+      <span><strong>Mugen</strong> <span lang="ja">無限</span> infinite</span>
+      <span aria-hidden="true">+</span>
+      <span><strong>Tanoshii</strong> <span lang="ja">楽しい</span> fun</span>
+      <span aria-hidden="true">=</span>
+      <span><strong>Mutano</strong></span>
+    </p>
+  </section>
+
+  <section aria-labelledby="make-title">
+    <h2 id="make-title">What we make</h2>
+    <ul class="things">
+      {
+        things.map(({ name, text }) => (
+          <li>
+            <h3>{name}</h3>
+            <p>{text}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    align-items: center;
+    margin: 1.5rem 0 4rem;
+    padding: clamp(1.5rem, 6vw, 4rem);
+    border-radius: 2rem;
+    background: var(--color-indigo-600);
+    color: var(--color-white);
+  }
+  .hero h1 {
+    font-size: clamp(2.75rem, 8vw, 5rem);
+    color: var(--color-yuzu-300);
+  }
+  .mark {
+    width: clamp(7rem, 22vw, 15rem);
+    height: auto;
+  }
+  .lede {
+    font-size: 1.25rem;
+    max-width: 34rem;
+    margin: 0 0 1.5rem;
+  }
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    background: var(--color-yuzu-300);
+    color: var(--color-neutral-900);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .button:hover {
+    background: var(--color-white);
+  }
+  .name {
+    margin-bottom: 4rem;
+  }
+  .equation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    align-items: baseline;
+    font-size: 1.375rem;
+  }
+  .equation strong {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--primary);
+  }
+  .things {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+    gap: 1rem;
+  }
+  .things li {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+  }
+  .things p {
+    margin: 0;
+    color: var(--muted);
+  }
+  @media (max-width: 40rem) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
