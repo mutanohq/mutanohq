@@ -1,9 +1,9 @@
 {
-  "name": "{{slug}}",
+  "name": "mutanohq",
   "version": "0.0.0",
   "private": true,
-  "description": "{{description}}",
-  "author": "{{holder}}",
+  "description": "Mutano's headquarters: the brand, website, and shared code behind everything we make.",
+  "author": "Mutano",
   "type": "module",
   "scripts": {
     "build": "pnpm -r --if-present run build",

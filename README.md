@@ -1,6 +1,6 @@
-# {{name}}
+# Mutano
 
-{{description}}
+Mutano's headquarters: the brand, website, and shared code behind everything we make.
 
 ## Repository
 
@@ -11,11 +11,12 @@
 ## Development
 
 ```sh
-{{setup}}
-{{verify}}
+nvm install
+pnpm install
+pnpm verify
 ```
 
-`{{verify}}` runs every check CI runs. [Tooling](docs/tooling.md) describes each command.
+`pnpm verify` runs every check CI runs. [Tooling](docs/tooling.md) describes each command.
 
 ## Documentation
 

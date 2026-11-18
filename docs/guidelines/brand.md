@@ -1,12 +1,12 @@
 ---
 status: DRAFT
 last_updated: 2026-11-02
-scope: How {{name}} is named, sounds, and looks, and why each choice was made.
+scope: How Mutano is named, sounds, and looks, and why each choice was made.
 ---
 
 # Brand
 
-This guideline records {{name}}'s brand decisions and how to apply them: the name, the voice, and the visual identity. The files that carry the brand, such as logos, icons, and fonts, are cataloged where the project keeps its assets.
+This guideline records Mutano's brand decisions and how to apply them: the name, the voice, and the visual identity. The files that carry the brand, such as logos, icons, and fonts, are cataloged where the project keeps its assets.
 
 <!--
 How to use this file. Delete this comment once the brand is filled in.
@@ -30,7 +30,7 @@ How to use this file. Delete this comment once the brand is filled in.
 
 ## Voice
 
-The [documentation guidelines](documentation.md#voice) set the default voice for everything a person reads in this repository, with guardrails on where playfulness belongs. This section refines it for {{name}}: where the two differ on tone, this section wins for this project, and the guardrails hold either way. Leave it empty to use the default unchanged.
+The [documentation guidelines](documentation.md#voice) set the default voice for everything a person reads in this repository, with guardrails on where playfulness belongs. This section refines it for Mutano: where the two differ on tone, this section wins for this project, and the guardrails hold either way. Leave it empty to use the default unchanged.
 
 <!--
 - Positioning, if the brand speaks to a market: who it is for, what it is, and the reason to believe it. List the assumptions it rests on until they are confirmed.

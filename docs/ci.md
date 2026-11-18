@@ -6,7 +6,7 @@ scope: The CI workflow, the shared setup action, action pinning, dependency upda
 
 # Continuous integration
 
-`.github/workflows/ci.yml` verifies every pull request, every merge-queue check, and, unless the project requires a merge queue, every push to `main`. It runs the same gate a contributor runs locally, `{{verify}}`, so a green run means the gate passed rather than that some CI-only approximation of it did. [Workspace](workspace.md) says what each check guarantees.
+`.github/workflows/ci.yml` verifies every pull request, every merge-queue check, and, unless the project requires a merge queue, every push to `main`. It runs the same gate a contributor runs locally, `pnpm verify`, so a green run means the gate passed rather than that some CI-only approximation of it did. [Workspace](workspace.md) says what each check guarantees.
 
 ## Toolchain
 
@@ -18,9 +18,9 @@ Setup, the toolchain and an install from the lockfile, lives in the composite ac
 
 <!-- The workflow's jobs. A project that adds jobs or changes what `Verify` runs updates the table. -->
 
-| Job      | Runner          | Runs                                                |
-| -------- | --------------- | --------------------------------------------------- |
-| `Verify` | `ubuntu-latest` | `{{verify}}`, then the `Working tree is clean` step |
+| Job      | Runner          | Runs                                                 |
+| -------- | --------------- | ---------------------------------------------------- |
+| `Verify` | `ubuntu-latest` | `pnpm verify`, then the `Working tree is clean` step |
 
 By default there is no change-based selection: every run checks the whole workspace. A check that skips part of the workspace on a pull request lets that part reach `main` unverified, and a selection has to be maintained and can be wrong in ways a green run hides. A project whose full run grows too slow to wait for adds selection then, under three rules:
 
