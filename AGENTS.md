@@ -23,8 +23,8 @@ This repository is docs-first. [`docs/README.md`](docs/README.md) indexes every 
 
 ## Project specifics
 
-- **The brand kit's `assets/` is generated.** Change `packages/brand/src/geometry.ts` or `src/palette.ts`, then run `pnpm --filter @mutano/brand build`, and commit the source and the output together. Never edit a file under `packages/brand/assets/` by hand.
-- **`apps/website/public/` is generated** by `apps/website/scripts/copy-brand.ts` on every `dev` and `build`. Put site-only static files under `src/` instead.
+- **Most of `assets/` is generated.** `assets/logo/`, `favicon/`, `app-icon/`, and `social/` are written by `pnpm assets` from `scripts/logo.ts`, `scripts/utano-outlines.svg`, and `assets/colors/colors.css`. Change a source, run `pnpm assets`, and commit both; never edit a generated file by hand. A color change also updates the tables in `docs/guidelines/brand.md#color`, which `scripts/colors.test.ts` checks.
+- **The website serves `assets/` directly** at `/brand/assets/<path>` (`apps/www/src/lib/brand.ts`). Never copy a brand file into the app.
 - **The Mutano name, logo, and icons are not under the code's license.** Follow `docs/guidelines/brand.md` when using them.
 
 ## Knowledge
