@@ -35,3 +35,7 @@ playwright-report
 
 # Short-lived plans (docs/guidelines/documentation.md, "What belongs here").
 docs/plans
+
+# Astro: generated types, and public/, which scripts/copy-brand.ts fills from the brand kit.
+.astro
+apps/website/public

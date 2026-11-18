@@ -5,9 +5,12 @@ packages:
 # Every version is declared once, here, and packages refer to it as `catalog:`, so the workspace can never
 # hold two versions of one dependency by accident. A new third-party dependency adds its version here.
 catalog:
+  "@fontsource-variable/nunito": ^5.3.0
+  "@fontsource/lilita-one": ^5.3.0
   "@resvg/resvg-js": ^2.6.2
   "@types/node": ^26.6.6
   "@vitest/coverage-v8": ^5.1.0
+  astro: ^7.4.11
   oxfmt: ^0.76.0
   oxlint: ^1.91.0
   prettier: ^3.9.10
