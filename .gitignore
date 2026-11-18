@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencies
+node_modules
+
+# Build output and caches
+dist
+coverage
+*.tsbuildinfo
+test-results
+playwright-report
+
+# Local environment and credentials; an example file is committed instead.
+.env
+.env.*
+!.env.example
+
+# AI agents: every agent directory is ignored, including the settings and skills a tool treats as
+# shared. Contributors use different harnesses, skills, and settings, so committing one person's setup
+# would impose it on everyone else. AGENTS.md holds the shared instructions; a harness that does not read it
+# by default, such as Gemini CLI, is pointed at it in each contributor's own settings.
+.agents
+.antigravity
+.claude
+.codex
+.cursor
+.gemini
+.opencode
+
+# Short-lived plans (docs/guidelines/documentation.md, "What belongs here").
+docs/plans
+
+# Astro: generated types, and public/, which scripts/copy-brand.ts fills from the brand kit.
+.astro
+apps/website/public

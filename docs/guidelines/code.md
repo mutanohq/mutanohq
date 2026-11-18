@@ -99,7 +99,7 @@ When a change touches a package's exports or its observable behavior or failures
 
 ## Formatting, linting, and type checking
 
-- Code MUST pass `{{verify}}`. [Workspace](../workspace.md) lists what it runs.
+- Code MUST pass `pnpm verify`. [Workspace](../workspace.md) lists what it runs.
 - Do not fight the formatter's output.
 - Lint rules are enforceable project policy. Change the rule, or add a scoped override with its reason recorded, rather than ignoring it broadly. A local suppression comment says why it is there.
 

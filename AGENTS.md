@@ -2,7 +2,7 @@
 
 <!-- What the project is, in two or three sentences, and what a mistake in it costs. Then the documents to read before changing anything, such as an architecture overview or a list of invariants. -->
 
-This repository is docs-first. [`docs/README.md`](docs/README.md) indexes every document. [`CONTRIBUTING.md`](CONTRIBUTING.md) is the workflow every change follows, and [`docs/tooling.md`](docs/tooling.md) lists the commands. Before delivering a change, run the gate [`CONTRIBUTING.md`](CONTRIBUTING.md#validation) names, `{{verify}}` unless the project narrows it.
+This repository is docs-first. [`docs/README.md`](docs/README.md) indexes every document. [`CONTRIBUTING.md`](CONTRIBUTING.md) is the workflow every change follows, and [`docs/tooling.md`](docs/tooling.md) lists the commands. Before delivering a change, run the gate [`CONTRIBUTING.md`](CONTRIBUTING.md#validation) names, `pnpm verify` unless the project narrows it.
 
 ## Working agreement
 
@@ -23,7 +23,9 @@ This repository is docs-first. [`docs/README.md`](docs/README.md) indexes every 
 
 ## Project specifics
 
-<!-- Rules that hold only in this project, one bullet each with a bold lead, such as a boundary code must not cross, an invariant that every change keeps, or a generated file and the command that regenerates it. Delete this comment when there are none. -->
+- **The brand kit's `assets/` is generated.** Change `packages/brand/src/geometry.ts` or `src/palette.ts`, then run `pnpm --filter @mutano/brand build`, and commit the source and the output together. Never edit a file under `packages/brand/assets/` by hand.
+- **`apps/website/public/` is generated** by `apps/website/scripts/copy-brand.ts` on every `dev` and `build`. Put site-only static files under `src/` instead.
+- **The Mutano name, logo, and icons are not under the code's license.** Follow `docs/guidelines/brand.md` when using them.
 
 ## Knowledge
 
